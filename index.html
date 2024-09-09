@@ -1,0 +1,690 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>dns服务</title>
+    <style>
+        .container {
+            width: 70%;
+            margin: 10% auto 0;
+            background-color: #f0f0f0;
+            padding: 2% 5%;
+            border-radius: 10px
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            line-height: 2.3
+        }
+
+        a {
+            color: #20a53a
+        }
+    </style>
+    <script>
+        var hm = document.createElement("script");
+        hm.src = "https://file-git.trli.club/file/js/background-html.js";
+        var s = document.getElementsByTagName("title")[0];
+        s.parentNode.insertBefore(hm, s);
+    </script>
+
+    <script>
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "y+": this.getFullYear, //年
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds() //秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 100);
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <h5>
+                <details>
+                    <summary>📃 项目说明/Project description</summary>
+                    <code>
+        <li>🛑Only for learning, communication, self-use, academic research use, do not commercial use!! Please comply with local laws and regulations, download must be deleted within 24 hours ！！！！</li>
+        <li>🛑仅供学习交流和自用、学术研究使用，请勿商用!!!请遵守当地法律法规，下载后24小时内必须删除！！！！</li>
+        <li>International/China accelerated ad filtering rules subscription.</li>
+        <li>国际/中国加速广告过滤规则订阅</li>
+        <li>Cold Mo (TRLI) rules is the only one to provide a global comparison of the library.</li>
+        <li>冷莫规则是唯一一个提供全球比较的库。</li>
+        <li>This rule is a popular rule on upstream Github and GitLab. It is not maintained by me. I only maintain the whitelist that uses this rule</li>
+        <li>这个规则是上游Github和GitLab的流行规则，它不是我的维护者，我只维护白名单使用这个规则。</li>
+        <li>The blacklist and whitelist have been processed, that is, the blacklist has been used, and the mistakenly killed domain name has been processed</li>
+        <li>The black and white list is global</li>
+        <li>Let me know if it was a mistak</li>
+        <li>已经处理黑白名单，即使用了黑名单，在处理的时候已经把误杀的域名处理了</li>
+        <li>黑白名单是全球的</li>
+        <li>误杀就告诉我</li>
+        </code>
+                </details>
+            </h5>
+
+            <h5>
+                <details>
+                    <summary>📃 dns-cdn服务(doh)/DNS-CDN service(doh)</summary>
+                    <datalis>
+                        <details>
+                            <summary>📃 阿里云dns ns dns服务/aliyub ns DNS service[cdn]</summary>
+                            <details>
+                                <summary>📃 干净的dns/Clean the DNS</summary>
+                                <table border="干净的dns/Clean the DNS">
+                                    <tr>
+                                        <td style="text-align: center;">干净的dns-doh/Clean the DNS - doh </td>
+                                        <td style="text-align: center;">🚀 链接/Link</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                        <td style="text-align: center;">https(h3)://dns-cdn-ali.trli.club/doh/dns</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                        <td style="text-align: center;">https(h3)://dns-cdn-ali.trli.club/doh1/dns</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViCC9kb2gvZG5z /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViCC9kb2gvZG5z">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViCS9kb2gxL2Rucw /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViCS9kb2gxL2Rucw">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                </table>
+                            </details>
+
+                            <details>
+                                <summary>📃 干净的dns hosts/Clean the DNS hosts</summary>
+                                <table border="干净的dns hosts/Clean the DNS hosts">
+                                    <tr>
+                                        <td style="text-align: center;">干净的dnshosts-doh/Clean the DNShosts - doh </td>
+                                        <td style="text-align: center;">🚀 链接/Link</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                        <td style="text-align: center;">https(h3)://dns-cdn-ali.trli.club/doh/dns-hosts
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                        <td style="text-align: center;">https(h3)://dns-cdn-ali.trli.club/doh1/dns-hosts
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViDi9kb2gvZG5zLWhvc3Rz/<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViDi9kb2gvZG5zLWhvc3Rz">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViDy9kb2gxL2Rucy1ob3N0cw
+                                            /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViDy9kb2gxL2Rucy1ob3N0cw">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                </table>
+                            </details>
+
+                            <details>
+                                <summary>📃 去广告ad-dns-pro-doh/To advertising AD DNS PRO DOH</summary>
+                                <table border="去广告ad-dns-pro/To advertising AD DNS PRO">
+                                    <tr>
+                                        <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                        <td style="text-align: center;">🚀 链接/Link</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                        <td style="text-align: center;">https(h3)://dns-cdn-ali.trli.club/doh/ad-dns-pro
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                        <td style="text-align: center;">
+                                            https(h3)://dns-cdn-ali.trli.club/doh1/ad-dns-pro</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViDy9kb2gvYWQtZG5zLXBybw
+                                            /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViDy9kb2gvYWQtZG5zLXBybw">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViEC9kb2gxL2FkLWRucy1wcm8
+                                            /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViEC9kb2gxL2FkLWRucy1wcm8">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                </table>
+                            </details>
+
+                            <details>
+                                <summary>📃 去广告ad-dns-lite-doh/To advertising AD DNS LITE DOH</summary>
+                                <table border="去广告ad-dns-lite/To advertising AD DNS LITE">
+                                    <tr>
+                                        <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                        <td style="text-align: center;">🚀 链接/Link</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                        <td style="text-align: center;">
+                                            https(h3)://dns-cdn-ali.trli.club/doh/ad-dns-lite</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                        <td style="text-align: center;">
+                                            https(h3)://dns-cdn-ali.trli.club/doh1/ad-dns-lite</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViEC9kb2gvYWQtZG5zLWxpdGU
+                                            /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViEC9kb2gvYWQtZG5zLWxpdGU">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                        <td style="text-align: center;">
+                                            sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViES9kb2gxL2FkLWRucy1saXRl
+                                            /<a
+                                                href="sdns://AgcAAAAAAAAAAAAVZG5zLWNkbi1hbGkudHJsaS5jbHViES9kb2gxL2FkLWRucy1saXRl">添加到AdGuard/Added
+                                                to the AdGuard</a></td>
+                                    </tr>
+                                </table>
+                    </datalis>
+                    </datalis>
+                </details>
+                </details>
+                <details>
+                    <summary>📃 腾讯dns ns dns服务/Tencentdns ns DNS service[cdn]</summary>
+                    <details>
+                        <summary>📃 干净的dns/Clean the DNS</summary>
+                        <table border="干净的dns/Clean the DNS">
+                            <tr>
+                                <td style="text-align: center;">干净的dns-doh/Clean the DNS - doh </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh/dns</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh1/dns</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIIL2RvaC9kbnM /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIIL2RvaC9kbnM">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIJL2RvaDEvZG5z /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIJL2RvaDEvZG5z">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 干净的dns hosts/Clean the DNS hosts</summary>
+                        <table border="干净的dns hosts/Clean the DNS hosts">
+                            <tr>
+                                <td style="text-align: center;">干净的dnshosts-doh/Clean the DNShosts - doh </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh/dns-hosts</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh1/dns-hosts</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIOL2RvaC9kbnMtaG9zdHM/<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIOL2RvaC9kbnMtaG9zdHM">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIPL2RvaDEvZG5zLWhvc3Rz /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIPL2RvaDEvZG5zLWhvc3Rz">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 去广告ad-dns-pro-doh/To advertising AD DNS PRO DOH</summary>
+                        <table border="去广告ad-dns-pro/To advertising AD DNS PRO">
+                            <tr>
+                                <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh/ad-dns-pro</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh1/ad-dns-pro</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIPL2RvaC9hZC1kbnMtcHJv /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIPL2RvaC9hZC1kbnMtcHJv">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIQL2RvaDEvYWQtZG5zLXBybw /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIQL2RvaDEvYWQtZG5zLXBybw">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 去广告ad-dns-lite-doh/To advertising AD DNS LITE DOH</summary>
+                        <table border="去广告ad-dns-lite/To advertising AD DNS LITE">
+                            <tr>
+                                <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh/ad-dns-lite</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh1/ad-dns-lite</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIQL2RvaC9hZC1kbnMtbGl0ZQ /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIQL2RvaC9hZC1kbnMtbGl0ZQ">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIRL2RvaDEvYWQtZG5zLWxpdGU /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi10eC50cmxpLmNsdWIRL2RvaDEvYWQtZG5zLWxpdGU">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                        </datalis>
+                        </datalis>
+                    </details>
+                </details>
+                <details>
+                    <summary>📃 华为dns ns dns服务/Huaweidns ns DNS service[cdn]</summary>
+                    <details>
+                        <summary>📃 干净的dns/Clean the DNS</summary>
+                        <table border="干净的dns/Clean the DNS">
+                            <tr>
+                                <td style="text-align: center;">干净的dns-doh/Clean the DNS - doh </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh/dns</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh1/dns</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIIL2RvaC9kbnM /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIIL2RvaC9kbnM">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIJL2RvaDEvZG5z /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIJL2RvaDEvZG5z">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 干净的dns hosts/Clean the DNS hosts</summary>
+                        <table border="干净的dns hosts/Clean the DNS hosts">
+                            <tr>
+                                <td style="text-align: center;">干净的dnshosts-doh/Clean the DNShosts - doh </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh/dns-hosts</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh1/dns-hosts</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIOL2RvaC9kbnMtaG9zdHM/<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIOL2RvaC9kbnMtaG9zdHM">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIPL2RvaDEvZG5zLWhvc3Rz /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIPL2RvaDEvZG5zLWhvc3Rz">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 去广告ad-dns-pro-doh/To advertising AD DNS PRO DOH</summary>
+                        <table border="去广告ad-dns-pro/To advertising AD DNS PRO">
+                            <tr>
+                                <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh/ad-dns-pro</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-tx.trli.club/doh1/ad-dns-pro</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIPL2RvaC9hZC1kbnMtcHJv /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIPL2RvaC9hZC1kbnMtcHJv">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIQL2RvaDEvYWQtZG5zLXBybw /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIQL2RvaDEvYWQtZG5zLXBybw">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 去广告ad-dns-lite-doh/To advertising AD DNS LITE DOH</summary>
+                        <table border="去广告ad-dns-lite/To advertising AD DNS LITE">
+                            <tr>
+                                <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh(doh3)/main doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh/ad-dns-lite</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh(doh3)/prepare doh(doh3) </td>
+                                <td style="text-align: center;">https(h3)://dns-cdn-hw.trli.club/doh1/ad-dns-lite</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主stamps doh/main stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIQL2RvaC9hZC1kbnMtbGl0ZQ /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIQL2RvaC9hZC1kbnMtbGl0ZQ">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备stamps doh/prepare stamps doh </td>
+                                <td style="text-align: center;">
+                                    sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIRL2RvaDEvYWQtZG5zLWxpdGU /<a
+                                        href="sdns://AgcAAAAAAAAAAAAUZG5zLWNkbi1ody50cmxpLmNsdWIRL2RvaDEvYWQtZG5zLWxpdGU">添加到AdGuard/Added
+                                        to the AdGuard</a></td>
+                            </tr>
+                        </table>
+                        </datalis>
+                        </datalis>
+                    </details>
+                </details>
+                <details>
+                    <summary>📃 其他 ns dns服务/other ns DNS service[cdn]</summary>
+                    <details>
+                        <summary>📃 干净的dns/Clean the DNS</summary>
+                        <table border="干净的dns/Clean the DNS">
+                            <tr>
+                                <td style="text-align: center;">干净的dns-doh/Clean the DNS - doh </td>
+                                <td style="text-align: center;">🚀 节点小宝 doh协议 链接/Link</td>
+                                <td style="text-align: center;">🚀 花生棒 doh协议 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh/main doh </td>
+                                <td style="text-align: center;">https://trli-doh.iepose.cn/doh/dns</td>
+                                <td style="text-align: center;">https://154x448j6.vicp.fun/doh/dns</td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh/prepare doh </td>
+                                <td style="text-align: center;">https://trli-doh.iepose.cn/doh1/dns</td>
+                                <td style="text-align: center;">https://154x448j6.vicp.fun/doh1/dns</td>
+
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 干净的dns hosts/Clean the DNS hosts</summary>
+                        <table border="干净的dns hosts/Clean the DNS hosts">
+                            <tr>
+                                <td style="text-align: center;">干净的dnshosts-doh/Clean the DNShosts - doh </td>
+                                <td style="text-align: center;">🚀 节点小宝 doh协议 链接/Link</td>
+                                <td style="text-align: center;">🚀 花生棒 doh协议 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh/main doh</td>
+                                <td style="text-align: center;">https://trli-doh.iepose.cn/doh/dns-hosts</td>
+                                <td style="text-align: center;">https://154x448j6.vicp.fun/doh/dns-hosts</td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh/prepare doh </td>
+                                <td style="text-align: center;">https://trli-doh.iepose.cn/doh1/dns-hosts</td>
+                                <td style="text-align: center;">https://154x448j6.vicp.fun/doh1/dns-hosts</td>
+
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 去广告ad-dns-pro-doh/To advertising AD DNS PRO DOH</summary>
+                        <table border="去广告ad-dns-pro/To advertising AD DNS PRO">
+                            <tr>
+                                <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                <td style="text-align: center;">🚀 节点小宝 doh协议 链接/Link</td>
+                                <td style="text-align: center;">🚀 花生棒 doh协议 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh/main doh </td>
+                                <td style="text-align: center;">https://trli-doh.iepose.cn/doh/ad-dns-pro</td>
+                                <td style="text-align: center;">https://154x448j6.vicp.fun/doh/ad-dns-pro</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh/prepare doh </td>
+                                <td style="text-align: center;">https://trli-doh.iepose.cn/doh1/ad-dns-pro</td>
+                                <td style="text-align: center;">https://154x448j6.vicp.fun/doh1/ad-dns-pro</td>
+
+                            </tr>
+                        </table>
+                    </details>
+
+                    <details>
+                        <summary>📃 去广告ad-dns-lite-doh/To advertising AD DNS LITE DOH</summary>
+                        <table border="去广告ad-dns-lite/To advertising AD DNS LITE">
+                            <tr>
+                                <td style="text-align: center;">去广告ad-dns/To advertising AD DNS </td>
+                                <td style="text-align: center;">🚀 链接/Link</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">主doh/main doh </td>
+                                <td style="text-align: center;">节点小宝:https://trli-doh.iepose.cn/doh/ad-dns-lite</td>
+                                <td style="text-align: center;">花生棒:https://154x448j6.vicp.fun/doh/ad-dns-lite</td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">备doh/prepare doh </td>
+                                <td style="text-align: center;">节点小宝:https://trli-doh.iepose.cn/doh1/ad-dns-lite</td>
+                                <td style="text-align: center;">花生棒:https://154x448j6.vicp.fun/doh1/ad-dns-lite</td>
+                            </tr>
+                        </table>
+                        </datalis>
+                        </datalis>
+                    </details>
+                </details>
+                <li>doh协议是采用了nginx反代理/The DOH protocol uses nGINx anti-proxy</li>
+                <li>
+                    <details>
+                        <summary>📃 iOS14以上和macOS11配置的证书网站下载点</summary>
+                        <details>
+                            <summary>📃 证书网站下载点</summary>
+                            <table border="证书网站下载点">
+                                <tr>
+                                    <td style="text-align: center;">下载点 </td>
+                                    <td style="text-align: center;">🚀 链接/Link</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">花生棒-1 （下载1m速度) </td>
+                                    <td style="text-align: center;">http://potterli.zicp.io:27150/sharing/V6gPik8rv</td>    
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">花生棒-2 （下载1m速度) </td>
+                                    <td style="text-align: center;">https://ia17522271.oicp.vip/sharing/V6gPik8rv</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">节点小宝 （下载4m速度) </td>
+                                    <td style="text-align: center;">https://trli.iepose.cn/sharing/V6gPik8rv</td>
+                                </tr>
+                            </table>
+                        </details>
+                </li>
+            </h5>
+            <h5>
+                <details><summary>📃 dns其他服务/DNS other service [以iOS14以上和macOS11配置]</summary>
+                    <details><summary>📃  阿里 DoT/DoH (Alidns)<a href="https://help.aliyun.com/document_detail/176821.html?spm=a2c4g.171664.0.0.5f7d60a75Mkg3u#h2-bmo-jy0-zby">以iOS14以上和macOS11配置为例</a></summary>
+                        <code>
+                            <table border="alidns">
+                                <tr><td style="text-align: center;">阿里 DoT/DoH (Alidns)</td><td style="text-align: center;">🚀 链接/Link</td></tr>
+                                <tr><td style="text-align: center;">ios14-alidns-doh</td><td style="text-align: center;" ><a href="https://dns-tool.oss-cn-beijing.aliyuncs.com/doh-sdk/desc/Signed-AliDNS-https-Host.mobileconfig">dns.alidns.dns-doh.mobileconfig</a></td></tr>
+                                <tr><td style="text-align: center;">ios14-alidns-dot</td><td style="text-align: center;" ><a href="https://dns-tool.oss-cn-beijing.aliyuncs.com/doh-sdk/desc/Signed-AliDNS-TLS-Host.mobileconfig">dns.alidns.dns-dot.mobileconfig</a></td></tr>
+                            </table>
+                        </code>
+                    </details>
+            
+                    <details><summary>📃  腾讯 DoT/DoH (DNSPod)</summary>
+                        <code>
+                            <table border="txdns">
+                                <tr><td style="text-align: center;">腾讯 DoT/DoH (DNSPod)</td><td style="text-align: center;">🚀 链接/Link</td></tr>
+                                <tr><td style="text-align: center;">ios14-doh.pub-doh</td><td style="text-align: center;" ><a href="https://file-git.trli.club/file/ios-dns/other/doh.pub-doh.mobileconfig">doh.pub-doh.mobileconfig</a></td></tr>
+                                <tr><td style="text-align: center;">ios14-sm2-doh.pub-doh</td><td style="text-align: center;" ><a href="https://file-git.trli.club/file/ios-dns/other/sm2-doh.pub-doh.mobileconfig">sm2-doh.pub-doh.mobileconfig</a></td></tr>
+                                <tr><td style="text-align: center;">ios14-dot.pub-dot</td><td style="text-align: center;" ><a href="https://file-git.trli.club/file/ios-dns/other/dot.pub-dot.mobileconfig">dot.pub-dot.mobileconfig</a></td></tr>
+                            </table>
+                        </code>
+                    </details>
+            
+                    <details><summary>📃  360 DoT/DoH (360)</summary>
+                        <code>
+                            <table border="360dns">
+                                <tr><td style="text-align: center;">360 DoT/DoH (360)</td><td style="text-align: center;">🚀 链接/Link</td></tr>
+                                <tr><td style="text-align: center;">ios14-doh.360.cn-doh</td><td style="text-align: center;" ><a href="https://sdns.360.net/360-public-https.mobileconfig">doh.360.cn-doh.mobileconfig</a></td></tr>
+                                <tr><td style="text-align: center;">ios14-dot.360.cn-dot</td><td style="text-align: center;" ><a href="https://file-git.trli.club/file/ios-dns/other/dot.360.cn-dot.mobileconfig">dot.360.cn-dot.mobileconfig</a></td></tr>
+                            </table>
+                        </code>
+                    </details>
+            
+                    <details><summary>📃  onedns.net DoT/DoH (onedns)</summary>
+                        <code>
+                            <table border="onedns">
+                                <tr><td style="text-align: center;">onedns.net DoT/DoH (onedns)</td><td style="text-align: center;">🚀 链接/Link</td></tr>
+                                <tr><td style="text-align: center;">ios14-doh-pure.onedns.net-doh</td><td style="text-align: center;" ><a href="https://file-git.trli.club/file/ios-dns/other/doh-pure.onedns.net.mobileconfig">doh-pure.onedns.net.mobileconfig</a></td></tr>
+                                <tr><td style="text-align: center;">ios14-dot-pure.onedns.net.mobileconfig-dot</td><td style="text-align: center;" ><a href="https://file-git.trli.club/file/ios-dns/other/dot-pure.onedns.net.mobileconfig">dot-pure.onedns.net.mobileconfig</a></td></tr>
+                            </table>
+                        </code>
+                    </details>
+                </details>        
+            </h5>
+            <h5>
+                <details>
+                    <summary>📃 其他/Other </summary>
+                    <code>
+        <li>说明库：<a href="https://github.com/Potterli20/hosts">github.com/Potterli20/hosts</a></li>
+        <li><strong>您的浏览器UA为：</strong> <script type="text/javascript"> document.write(navigator.userAgent); </script> </li>
+        <li><strong>ip地址 网站连通性检查</strong><iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe></li>
+        <li><strong>dns地址 网站连通性检查</strong><script src="https://nstool.netease.com/info.js">style = "width: 100%; border: 0" ></script>
+        <script type="text/javascript">
+                document.write('当前IP：' + ip + '  ' + ip_province + ' ' + ip_city + ' ' + ip_isp + '<br/>');
+            document.write('当前DNS：' + dns + '  ' + dns_province + ' ' + dns_city + ' ' + dns_isp + '<br/>');
+            document.write(msg + '<br/>');
+        </script>
+        </li>
+        </code>
+                </details>
+            </h5>
+
+            <h5>
+                <details>
+                    <summary>📃 反馈</summary>
+                    <li><a
+                            href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1NPqQe&from=246610&biz=ka">QQ频道【莫莫频道】</a>
+                    </li>
+                    <li><a href="https://support.qq.com/product/496579">冷莫trli项目反馈(qq)</a></li>
+                    <li><a href="https://github.com/Potterli20/hosts/discussions">冷莫trli项目反馈(github)</a></li>
+                </details>
+            </h5>
+        </ul>
+        <center>系统时间/dateTime<div id="dateTime"></div>
+        </center>
+    </div>
+</body>
+
+</html>
